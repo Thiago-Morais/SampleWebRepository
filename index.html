@@ -5,9 +5,10 @@
         <script type="text/javascript">
             function update_catalog_link() {
                 var catalog = document.getElementById("catalog");
-                var preLink = "unitydl://mylink";
+                var deepLink = "unitydl://mylink";
+                var url = window.location.href;
                 var catalogPath = "/MobileTest/aa/Android/catalog.json";
-                catalog.href = `${preLink}?${window.location.href}${catalogPath}`;
+                catalog.href = `${deepLink}?load_catalog_in=${url}${catalogPath}`;
             }
         </script>
     </head>
