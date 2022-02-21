@@ -5,7 +5,9 @@
         <script type="text/javascript">
             function update_catalog_link() {
                 var catalog = document.getElementById("catalog");
-                catalog.href = "unitydl://mylink?/SampleWebRepository/MobileTest/aa/Android/catalog.json";
+                var preLink = "unitydl://mylink";
+                var catalogPath = "/MobileTest/aa/Android/catalog.json";
+                catalog.href = `${preLink}?${window.location.href}${catalogPath}`;
             }
         </script>
     </head>
@@ -14,8 +16,7 @@
         <h1>My Deep Link Test page</h1>
         <p><a href="unitydl://mylink">Launch</a></p>
         <p><a href="unitydl://mylink?parameter">Launch with Parameter</a></p>
-        <p><a href="" id="catalog" onclick="update_catalog_link()">Launch with catalog</a>
-        </p>
+        <p><a href="" id="catalog" onclick="update_catalog_link()">Launch with catalog</a></p>
     </body>
 
 </html>
