@@ -3,18 +3,17 @@
     <head>
         <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
         <script type="text/javascript">
-            function update_catalog_link() {
-                var launch = document.getElementById("launch");
-                var deepLink = "unitydl://lab1";
-                var token = "token=catalog.json/";
-                launch.href = `${deepLink}?${token}`;
+            function set_token_link() {
+                var launch = document.getElementById("launch_token");
+                launch.href = `unitydl://lab1?token=catalog.json`;
             }
         </script>
     </head>
 
     <body>
         <h1>My Deep Link Test page</h1>
-        <p><a href="" id="launch" onclick="update_catalog_link()">Launch with catalog</a></p>
+        <p><a href="unitydl://lab1" id="launch_only">Launch only</a></p>
+        <p><a href="unitydl://lab1" id="launch_token" onclick="set_token_link()">Launch with catalog</a></p>
     </body>
 
 </html>
